@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryan Stefan | Business Analytics & MIS Portfolio</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9', // Sky blue
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-sm shadow-sm z-50 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo/Name -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="text-2xl font-bold text-slate-900 tracking-tight">
+                        Ryan<span class="text-brand-600">Stefan</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-slate-600 hover:text-brand-600 font-medium transition">About</a>
+                    <a href="#experience" class="text-slate-600 hover:text-brand-600 font-medium transition">Experience</a>
+                    <a href="projects.html" class="text-slate-600 hover:text-brand-600 font-medium transition">Projects</a>
+                    <a href="coursework.html" class="text-slate-600 hover:text-brand-600 font-medium transition">Coursework</a>
+                    <a href="#contact" class="px-4 py-2 rounded-full bg-brand-600 text-white hover:bg-brand-700 transition font-medium shadow-md">Contact Me</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-slate-900 focus:outline-none p-2">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100">
+            <div class="px-4 pt-2 pb-6 space-y-2 shadow-lg">
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-50">About</a>
+                <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-50">Experience</a>
+                <a href="projects.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-50">Projects</a>
+                <a href="coursework.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-50">Coursework</a>
+                <a href="#contact" class="block px-3 py-2 mt-4 text-center rounded-md text-base font-bold bg-brand-600 text-white hover:bg-brand-700">Contact Me</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-32 pb-20 lg:pt-48 lg:pb-32 bg-gradient-to-br from-slate-50 via-white to-brand-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse lg:flex-row items-center gap-12">
+            
+            <!-- Text Content -->
+            <div class="flex-1 text-center lg:text-left space-y-6">
+                <div class="inline-block px-3 py-1 bg-brand-100 text-brand-600 rounded-full text-sm font-semibold tracking-wide mb-2">
+                    Senior @ University of Dayton
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight">
+                    Data-Driven Insights.<br>
+                    <span class="text-brand-600">Strategic Solutions.</span>
+                </h1>
+                <p class="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto lg:mx-0">
+                    I specialize in MIS, Business Analytics, and Cyber Security. 
+                    Merging technical expertise with business strategy to solve complex problems.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                    <a href="#experience" class="w-full sm:w-auto px-8 py-3 bg-brand-600 text-white rounded-lg font-semibold shadow-lg hover:bg-brand-700 hover:shadow-brand-500/30 transition transform hover:-translate-y-0.5">
+                        View Experience
+                    </a>
+                    <a href="projects.html" class="w-full sm:w-auto px-8 py-3 bg-white text-slate-700 border border-slate-300 rounded-lg font-semibold hover:bg-slate-50 hover:border-slate-400 transition">
+                        See Projects
+                    </a>
+                </div>
+                
+                <!-- Social Links -->
+                <div class="flex items-center justify-center lg:justify-start gap-6 pt-6 text-slate-400">
+                    <a href="https://www.linkedin.com/in/ryan-stefan" target="_blank" class="hover:text-brand-600 transition text-2xl">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:ryanstefan14@gmail.com" class="hover:text-brand-600 transition text-2xl">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <!-- Placeholder for GitHub or other links -->
+                    <!-- <a href="#" class="hover:text-brand-600 transition text-2xl"><i class="fab fa-github"></i></a> -->
+                </div>
+            </div>
+
+            <!-- Hero Image / Avatar -->
+            <div class="flex-1 flex justify-center lg:justify-end relative">
+                <!-- Decorative blob -->
+                <div class="absolute -z-10 top-0 right-0 w-72 h-72 bg-brand-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+                <div class="absolute -z-10 top-0 right-20 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+                
+                <div class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-2xl overflow-hidden shadow-2xl border-4 border-white rotate-3 hover:rotate-0 transition duration-500">
+                    <!-- REPLACE THIS SRC WITH YOUR ACTUAL PHOTO -->
+                    <!-- I used a generic professional placeholder here -->
+                    <img src="https://ui-avatars.com/api/?name=Ryan+Stefan&background=0ea5e9&color=fff&size=512" 
+                         alt="Ryan Stefan" 
+                         class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-900">About Me</h2>
+                <div class="w-20 h-1 bg-brand-600 mx-auto mt-4 rounded-full"></div>
+            </div>
+            <div class="bg-slate-50 rounded-2xl p-8 shadow-sm border border-slate-100">
+                <p class="text-lg text-slate-700 leading-relaxed text-center">
+                    I am a Senior at the <span class="font-semibold text-brand-600">University of Dayton</span> studying 
+                    Management Information Systems, Business Analytics, and Cyber Security. 
+                    I am a quick learner, active listener, and have a passion for problem solving. 
+                    I am excited to continue my career at Dayton as well as in the professional world.
+                </p>
+                
+                <!-- Key Skills Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10">
+                    <div class="p-4 bg-white rounded-lg shadow-sm text-center border border-slate-100">
+                        <i class="fas fa-chart-bar text-brand-500 text-2xl mb-2"></i>
+                        <h3 class="font-semibold text-slate-900">Power BI</h3>
+                    </div>
+                    <div class="p-4 bg-white rounded-lg shadow-sm text-center border border-slate-100">
+                        <i class="fas fa-shield-alt text-brand-500 text-2xl mb-2"></i>
+                        <h3 class="font-semibold text-slate-900">Cyber Security</h3>
+                    </div>
+                    <div class="p-4 bg-white rounded-lg shadow-sm text-center border border-slate-100">
+                        <i class="fas fa-chess text-brand-500 text-2xl mb-2"></i>
+                        <h3 class="font-semibold text-slate-900">IT Strategy</h3>
+                    </div>
+                    <div class="p-4 bg-white rounded-lg shadow-sm text-center border border-slate-100">
+                        <i class="fas fa-users text-brand-500 text-2xl mb-2"></i>
+                        <h3 class="font-semibold text-slate-900">Leadership</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900">Professional Experience</h2>
+                <p class="mt-4 text-slate-600">My journey in analytics and operations.</p>
+            </div>
+
+            <div class="relative space-y-8">
+                <!-- Vertical Line for Desktop -->
+                <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-slate-200"></div>
+
+                <!-- Job 1: CareSource -->
+                <div class="relative flex flex-col md:flex-row items-center">
+                    <div class="flex-1 w-full md:w-1/2 p-6 md:pr-12 md:text-right order-2 md:order-1">
+                        <h3 class="text-xl font-bold text-slate-900">CareSource</h3>
+                        <p class="text-brand-600 font-medium">Data Analytics Intern</p>
+                        <p class="text-sm text-slate-500 mt-1 mb-4"><i class="far fa-calendar-alt mr-1"></i> May 2025 - August 2025</p>
+                        <p class="text-slate-600">
+                            Focused on analyzing healthcare data to drive decision-making and improve operational efficiency.
+                        </p>
+                    </div>
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 bg-brand-600 rounded-full border-4 border-white shadow hidden md:block order-2"></div>
+                    <div class="flex-1 w-full md:w-1/2 p-6 md:pl-12 order-3"></div>
+                </div>
+
+                <!-- Job 2: The Connor Group -->
+                <div class="relative flex flex-col md:flex-row items-center">
+                    <div class="flex-1 w-full md:w-1/2 p-6 md:pr-12 md:text-right order-2 md:order-1"></div>
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 bg-white border-2 border-brand-600 rounded-full shadow hidden md:block order-2"></div>
+                    <div class="flex-1 w-full md:w-1/2 p-6 md:pl-12 order-3">
+                        <h3 class="text-xl font-bold text-slate-900">The Connor Group</h3>
+                        <p class="text-brand-600 font-medium">Technology Operations Intern</p>
+                        <p class="text-sm text-slate-500 mt-1 mb-4"><i class="far fa-calendar-alt mr-1"></i> May 2024 - August 2024</p>
+                        <p class="text-slate-600">
+                            Supported technology infrastructure and operations in a high-paced real estate environment.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Job 3: Winsupply -->
+                <div class="relative flex flex-col md:flex-row items-center">
+                    <div class="flex-1 w-full md:w-1/2 p-6 md:pr-12 md:text-right order-2 md:order-1">
+                        <h3 class="text-xl font-bold text-slate-900">Winsupply</h3>
+                        <p class="text-brand-600 font-medium">Accounting Intern</p>
+                        <p class="text-sm text-slate-500 mt-1 mb-4"><i class="far fa-calendar-alt mr-1"></i> May 2023 - August 2023</p>
+                        <p class="text-slate-600">
+                            Gained foundational business experience in accounting processes and financial data handling.
+                        </p>
+                    </div>
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 bg-white border-2 border-brand-600 rounded-full shadow hidden md:block order-2"></div>
+                    <div class="flex-1 w-full md:w-1/2 p-6 md:pl-12 order-3"></div>
+                </div>
+
+                <!-- Other Experience (Combined) -->
+                <div class="relative flex flex-col md:flex-row items-center">
+                    <div class="flex-1 w-full md:w-1/2 p-6 md:pr-12 md:text-right order-2 md:order-1"></div>
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 bg-slate-200 rounded-full shadow hidden md:block order-2"></div>
+                    <div class="flex-1 w-full md:w-1/2 p-6 md:pl-12 order-3">
+                        <h3 class="text-lg font-bold text-slate-700">Previous Roles</h3>
+                        <ul class="mt-2 space-y-2 text-slate-600 text-sm">
+                            <li><strong>Delta Sigma Pi:</strong> Member (Feb 2023 - Present)</li>
+                            <li><strong>Triad Technologies:</strong> Warehouse Associate (Summer 2022)</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Section (Directs to future files) -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="grid md:grid-cols-2 gap-8">
+                
+                <!-- Projects Card -->
+                <div class="group relative overflow-hidden rounded-2xl bg-slate-900 text-white shadow-xl transition-all hover:shadow-2xl">
+                    <div class="absolute inset-0 bg-gradient-to-br from-brand-600 to-purple-600 opacity-90 transition-opacity group-hover:opacity-100"></div>
+                    <div class="relative p-10 flex flex-col items-start h-full">
+                        <div class="mb-4 p-3 bg-white/20 rounded-lg backdrop-blur-sm">
+                            <i class="fas fa-laptop-code text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Projects</h3>
+                        <p class="text-slate-100 mb-6 flex-grow">
+                            Explore my technical projects in Data Analysis, Machine Learning models, and business case studies.
+                        </p>
+                        <a href="projects.html" class="inline-flex items-center font-semibold hover:text-white text-slate-100">
+                            View Portfolio <i class="fas fa-arrow-right ml-2 text-sm transition-transform group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Coursework Card -->
+                <div class="group relative overflow-hidden rounded-2xl bg-white border border-slate-200 shadow-lg transition-all hover:shadow-xl">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-slate-50 rounded-bl-full -mr-8 -mt-8 z-0"></div>
+                    <div class="relative p-10 flex flex-col items-start h-full z-10">
+                        <div class="mb-4 p-3 bg-brand-50 rounded-lg text-brand-600">
+                            <i class="fas fa-graduation-cap text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-2">Academic Coursework</h3>
+                        <p class="text-slate-600 mb-6 flex-grow">
+                            Detailed breakdown of my curriculum including Database Management, Cyber Security, and Business Intelligence.
+                        </p>
+                        <a href="coursework.html" class="inline-flex items-center font-semibold text-brand-600 hover:text-brand-700">
+                            View Classes <i class="fas fa-arrow-right ml-2 text-sm transition-transform group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer id="contact" class="bg-slate-900 text-slate-300 py-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-white mb-4">Let's Connect</h2>
+                    <p class="text-lg text-slate-400 mb-8">
+                        I am currently open to opportunities in Business Analytics and Cyber Security. 
+                        Feel free to reach out!
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center mr-4 text-brand-500">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <span>ryanstefan14@gmail.com</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center mr-4 text-brand-500">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <span>937-287-8534</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center mr-4 text-brand-500">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <span>Dayton, Ohio</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center md:text-right">
+                    <a href="mailto:ryanstefan14@gmail.com" class="inline-block px-8 py-4 bg-brand-600 text-white rounded-lg font-bold hover:bg-brand-500 transition shadow-lg shadow-brand-900/50">
+                        Send me an Email
+                    </a>
+                    <div class="mt-8 flex justify-center md:justify-end space-x-6">
+                        <a href="https://www.linkedin.com/in/ryan-stefan" class="text-2xl hover:text-white transition"><i class="fab fa-linkedin"></i></a>
+                        <!-- Add other socials here if needed -->
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-800 mt-16 pt-8 text-center text-sm text-slate-500">
+                <p>&copy; 2025 Ryan Stefan. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
