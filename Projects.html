@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Ryan Stefan</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9', // Sky blue
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-sm shadow-sm z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Back to Home Link -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-xl font-bold text-slate-900 tracking-tight hover:text-brand-600 transition flex items-center">
+                        <i class="fas fa-arrow-left mr-2 text-sm"></i> Back to Home
+                    </a>
+                </div>
+
+                <!-- Right Side: Profile Photo -->
+                <div class="flex items-center space-x-4">
+                    <div class="flex-shrink-0">
+                        <img src="Ryan_Stefan_Picture.jpg" 
+                             onerror="this.src='https://ui-avatars.com/api/?name=Ryan+Stefan&background=0ea5e9&color=fff'"
+                             alt="Ryan Stefan" 
+                             class="h-10 w-10 rounded-full object-cover border-2 border-slate-200 shadow-sm">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="pt-32 pb-12 bg-white border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl font-extrabold text-slate-900 mb-4">My Projects</h1>
+            <p class="text-xl text-slate-600 max-w-2xl mx-auto">
+                A collection of my work in Business Analytics, Machine Learning, and Data Visualization.
+            </p>
+        </div>
+    </header>
+
+    <!-- Projects Grid -->
+    <main class="flex-grow py-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- PROJECT 1: Placeholder -->
+                <div class="bg-white rounded-xl shadow-md border border-slate-100 overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                    <!-- Project Image -->
+                    <div class="h-48 bg-slate-200 relative overflow-hidden group">
+                        <!-- Replace src with your project screenshot -->
+                        <img src="https://via.placeholder.com/800x400?text=Project+Screenshot" 
+                             alt="Project 1" 
+                             class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-slate-900">Sales Data Analysis</h3>
+                            <!-- GitHub/Link Icon -->
+                            <a href="#" class="text-slate-400 hover:text-brand-600 transition"><i class="fab fa-github text-xl"></i></a>
+                        </div>
+                        <p class="text-slate-600 mb-4 flex-grow text-sm">
+                            Analyzed a large retail dataset to identify seasonal trends and improve inventory management efficiency by 15%.
+                        </p>
+                        <!-- Tech Stack Tags -->
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="px-2 py-1 bg-brand-50 text-brand-700 text-xs font-semibold rounded-md">Python</span>
+                            <span class="px-2 py-1 bg-brand-50 text-brand-700 text-xs font-semibold rounded-md">Pandas</span>
+                            <span class="px-2 py-1 bg-brand-50 text-brand-700 text-xs font-semibold rounded-md">Tableau</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 2: Placeholder -->
+                <div class="bg-white rounded-xl shadow-md border border-slate-100 overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                    <div class="h-48 bg-slate-200 relative overflow-hidden group">
+                        <img src="https://via.placeholder.com/800x400?text=Dashboard+Example" 
+                             alt="Project 2" 
+                             class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-slate-900">Power BI Financial Dashboard</h3>
+                            <a href="#" class="text-slate-400 hover:text-brand-600 transition"><i class="fas fa-external-link-alt text-xl"></i></a>
+                        </div>
+                        <p class="text-slate-600 mb-4 flex-grow text-sm">
+                            Created an interactive dashboard for financial reporting, visualizing key performance indicators (KPIs) for executive stakeholders.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="px-2 py-1 bg-brand-50 text-brand-700 text-xs font-semibold rounded-md">Power BI</span>
+                            <span class="px-2 py-1 bg-brand-50 text-brand-700 text-xs font-semibold rounded-md">SQL</span>
+                            <span class="px-2 py-1 bg-brand-50 text-brand-700 text-xs font-semibold rounded-md">Excel</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 3: Placeholder -->
+                <div class="bg-white rounded-xl shadow-md border border-slate-100 overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                    <div class="h-48 bg-slate-200 relative overflow-hidden group">
+                        <img src="https://via.placeholder.com/800x400?text=ML+Model" 
+                             alt="Project 3" 
+                             class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-slate-900">Customer Churn Prediction</h3>
+                            <a href="#" class="text-slate-400 hover:text-brand-600 transition"><i class="fab fa-github text-xl"></i></a>
+                        </div>
+                        <p class="text-slate-600 mb-4 flex-grow text-sm">
+                            Developed a machine learning model using Logistic Regression to predict customer churn rates with 85% accuracy.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="px-2 py-1 bg-brand-50 text-brand-700 text-xs font-semibold rounded-md">Python</span>
+                            <span class="px-2 py-1 bg-brand-50 text-brand-700 text-xs font-semibold rounded-md">Scikit-Learn</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 py-8 border-t border-slate-800 mt-auto">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 Ryan Stefan. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
