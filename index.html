@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+CTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -41,27 +41,37 @@
     <nav class="fixed w-full bg-white/90 backdrop-blur-sm shadow-sm z-50 transition-all duration-300">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
-                <!-- Logo/Name -->
-                <div class="flex-shrink-0 flex items-center">
-                    <a href="#" class="text-2xl font-bold text-slate-900 tracking-tight">
-                        Ryan<span class="text-brand-600">Stefan</span>
-                    </a>
-                </div>
                 
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex space-x-8">
-                    <a href="#about" class="text-slate-600 hover:text-brand-600 font-medium transition">About</a>
-                    <a href="#experience" class="text-slate-600 hover:text-brand-600 font-medium transition">Experience</a>
-                    <a href="projects.html" class="text-slate-600 hover:text-brand-600 font-medium transition">Projects</a>
-                    <a href="coursework.html" class="text-slate-600 hover:text-brand-600 font-medium transition">Coursework</a>
-                    <a href="#contact" class="px-4 py-2 rounded-full bg-brand-600 text-white hover:bg-brand-700 transition font-medium shadow-md">Contact Me</a>
+                <!-- Left Side: Empty (Name moved to hero) -->
+                <div class="flex-shrink-0 flex items-center">
+                    <!-- Name removed as requested -->
                 </div>
 
-                <!-- Mobile Menu Button -->
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-slate-900 focus:outline-none p-2">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
+                <!-- Middle: Desktop Menu -->
+                <div class="hidden md:flex items-center justify-center flex-1 px-8 space-x-6 lg:space-x-8">
+                    <a href="#about" class="text-slate-600 hover:text-brand-600 font-medium transition text-sm lg:text-base">About</a>
+                    <a href="#experience" class="text-slate-600 hover:text-brand-600 font-medium transition text-sm lg:text-base">Experience</a>
+                    <a href="projects.html" class="text-slate-600 hover:text-brand-600 font-medium transition text-sm lg:text-base">Projects</a>
+                    <a href="coursework.html" class="text-slate-600 hover:text-brand-600 font-medium transition text-sm lg:text-base">Coursework</a>
+                    <a href="#contact" class="px-4 py-2 rounded-full bg-brand-600 text-white hover:bg-brand-700 transition font-medium shadow-md text-sm lg:text-base">Contact</a>
+                </div>
+
+                <!-- Right Side: Mobile Button & Profile Photo -->
+                <div class="flex items-center space-x-4">
+                    <!-- Profile Photo Icon -->
+                    <div class="flex-shrink-0">
+                        <img src="Ryan_Stefan_Picture.jpg" 
+                             onerror="this.src='https://ui-avatars.com/api/?name=Ryan+Stefan&background=0ea5e9&color=fff'"
+                             alt="Ryan Stefan" 
+                             class="h-10 w-10 md:h-12 md:w-12 rounded-full object-cover border-2 border-slate-200 shadow-sm">
+                    </div>
+
+                    <!-- Mobile Menu Button (Visible on Mobile) -->
+                    <div class="md:hidden flex items-center">
+                        <button id="mobile-menu-btn" class="text-slate-600 hover:text-slate-900 focus:outline-none p-2">
+                            <i class="fas fa-bars text-xl"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -79,23 +89,23 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="pt-32 pb-20 lg:pt-48 lg:pb-32 bg-gradient-to-br from-slate-50 via-white to-brand-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse lg:flex-row items-center gap-12">
+    <header class="pt-24 pb-16 lg:pt-40 lg:pb-32 bg-gradient-to-br from-slate-50 via-white to-brand-50">
+        <!-- Main flex container -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-16">
             
-            <!-- Text Content -->
-            <div class="flex-1 text-center lg:text-left space-y-6">
-                <div class="inline-block px-3 py-1 bg-brand-100 text-brand-600 rounded-full text-sm font-semibold tracking-wide mb-2">
-                    Senior @ University of Dayton
-                </div>
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight">
-                    Data-Driven Insights.<br>
-                    <span class="text-brand-600">Strategic Solutions.</span>
-                </h1>
-                <p class="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto lg:mx-0">
-                    I specialize in MIS, Business Analytics, and Cyber Security. 
-                    Merging technical expertise with business strategy to solve complex problems.
+            <!-- Text Content (Left) -->
+            <div class="flex-1 text-center lg:text-left space-y-4 min-w-0 w-full">
+                <p class="text-base sm:text-xl lg:text-2xl xl:text-3xl font-medium text-slate-800 whitespace-nowrap overflow-visible">
+                    Senior at the University of Dayton
                 </p>
-                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                <p class="text-base sm:text-xl lg:text-2xl xl:text-3xl font-medium text-slate-800 whitespace-nowrap overflow-visible">
+                    Bachelor of Science in Business Administration
+                </p>
+                <p class="text-xs sm:text-base lg:text-lg xl:text-2xl font-medium text-slate-800 whitespace-nowrap overflow-visible">
+                    Management Information Systems | Business Analytics | Cyber Security
+                </p>
+                
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-8">
                     <a href="#experience" class="w-full sm:w-auto px-8 py-3 bg-brand-600 text-white rounded-lg font-semibold shadow-lg hover:bg-brand-700 hover:shadow-brand-500/30 transition transform hover:-translate-y-0.5">
                         View Experience
                     </a>
@@ -112,24 +122,27 @@
                     <a href="mailto:ryanstefan14@gmail.com" class="hover:text-brand-600 transition text-2xl">
                         <i class="fas fa-envelope"></i>
                     </a>
-                    <!-- Placeholder for GitHub or other links -->
-                    <!-- <a href="#" class="hover:text-brand-600 transition text-2xl"><i class="fab fa-github"></i></a> -->
                 </div>
             </div>
 
-            <!-- Hero Image / Avatar -->
-            <div class="flex-1 flex justify-center lg:justify-end relative">
-                <!-- Decorative blob -->
+            <!-- Hero Image & Name (Right) -->
+            <div class="flex-none flex flex-col items-center relative flex-shrink-0">
+                <!-- Decorative blobs -->
                 <div class="absolute -z-10 top-0 right-0 w-72 h-72 bg-brand-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
                 <div class="absolute -z-10 top-0 right-20 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
                 
-                <div class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-2xl overflow-hidden shadow-2xl border-4 border-white rotate-3 hover:rotate-0 transition duration-500">
-                    <!-- REPLACE THIS SRC WITH YOUR ACTUAL PHOTO -->
-                    <!-- I used a generic professional placeholder here -->
-                    <img src="https://ui-avatars.com/api/?name=Ryan+Stefan&background=0ea5e9&color=fff&size=512" 
+                <!-- Photo Container -->
+                <div class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-2xl overflow-hidden shadow-2xl border-4 border-white transition duration-500">
+                    <img src="Ryan_Stefan_Picture.jpg" 
+                         onerror="this.src='https://ui-avatars.com/api/?name=Ryan+Stefan&background=0ea5e9&color=fff&size=512'"
                          alt="Ryan Stefan" 
-                         class="w-full h-full object-cover">
+                         class="w-full h-full object-contain bg-slate-50">
                 </div>
+
+                <!-- Name Label (Below Photo) -->
+                <p class="mt-6 text-base sm:text-xl lg:text-2xl xl:text-3xl font-bold text-slate-800 whitespace-nowrap">
+                    Ryan Stefan
+                </p>
             </div>
         </div>
     </header>
@@ -156,12 +169,29 @@
                         <h3 class="font-semibold text-slate-900">Power BI</h3>
                     </div>
                     <div class="p-4 bg-white rounded-lg shadow-sm text-center border border-slate-100">
-                        <i class="fas fa-shield-alt text-brand-500 text-2xl mb-2"></i>
-                        <h3 class="font-semibold text-slate-900">Cyber Security</h3>
+                        <i class="fab fa-python text-brand-500 text-2xl mb-2"></i>
+                        <h3 class="font-semibold text-slate-900">Python</h3>
                     </div>
                     <div class="p-4 bg-white rounded-lg shadow-sm text-center border border-slate-100">
-                        <i class="fas fa-chess text-brand-500 text-2xl mb-2"></i>
-                        <h3 class="font-semibold text-slate-900">IT Strategy</h3>
+                        <i class="fas fa-database text-brand-500 text-2xl mb-2"></i>
+                        <h3 class="font-semibold text-slate-900">SQL</h3>
+                    </div>
+                    <div class="p-4 bg-white rounded-lg shadow-sm text-center border border-slate-100">
+                        <i class="fas fa-brain text-brand-500 text-2xl mb-2"></i>
+                        <h3 class="font-semibold text-slate-900">Machine Learning</h3>
+                    </div>
+                    <div class="p-4 bg-white rounded-lg shadow-sm text-center border border-slate-100">
+                        <i class="fas fa-chart-pie text-brand-500 text-2xl mb-2"></i>
+                        <h3 class="font-semibold text-slate-900">Tableau</h3>
+                    </div>
+                    <div class="p-4 bg-white rounded-lg shadow-sm text-center border border-slate-100">
+                        <i class="fab fa-java text-brand-500 text-2xl mb-2"></i>
+                        <h3 class="font-semibold text-slate-900">Java</h3>
+                    </div>
+                    <!-- REPLACED Cyber Security with R per instruction -->
+                    <div class="p-4 bg-white rounded-lg shadow-sm text-center border border-slate-100">
+                        <i class="fab fa-r-project text-brand-500 text-2xl mb-2"></i>
+                        <h3 class="font-semibold text-slate-900">R</h3>
                     </div>
                     <div class="p-4 bg-white rounded-lg shadow-sm text-center border border-slate-100">
                         <i class="fas fa-users text-brand-500 text-2xl mb-2"></i>
@@ -186,22 +216,44 @@
 
                 <!-- Job 1: CareSource -->
                 <div class="relative flex flex-col md:flex-row items-center">
+                    <!-- Text Content (Left Side) -->
                     <div class="flex-1 w-full md:w-1/2 p-6 md:pr-12 md:text-right order-2 md:order-1">
                         <h3 class="text-xl font-bold text-slate-900">CareSource</h3>
                         <p class="text-brand-600 font-medium">Data Analytics Intern</p>
                         <p class="text-sm text-slate-500 mt-1 mb-4"><i class="far fa-calendar-alt mr-1"></i> May 2025 - August 2025</p>
                         <p class="text-slate-600">
-                            Focused on analyzing healthcare data to drive decision-making and improve operational efficiency.
+                            Designed and implemented data-driven solutions, including a comprehensive IT strategy roadmap and an AI-powered patient monitoring dashboard, to enhance project tracking and health data analysis.
                         </p>
                     </div>
+                    <!-- Timeline Dot -->
                     <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 bg-brand-600 rounded-full border-4 border-white shadow hidden md:block order-2"></div>
-                    <div class="flex-1 w-full md:w-1/2 p-6 md:pl-12 order-3"></div>
+                    <!-- Logo (Right Side) -->
+                    <div class="flex-1 w-full md:w-1/2 p-6 md:pl-12 order-3">
+                        <div class="w-32 h-32 mx-auto md:mx-0 bg-white rounded-xl shadow-md p-4 flex items-center justify-center border border-slate-100 transition hover:shadow-lg">
+                            <!-- Logo Placeholder -->
+                            <img src="CareSource_Logo.png" 
+                                 onerror="this.style.display='none'; this.parentElement.innerText='CareSource Logo'"
+                                 alt="CareSource Logo" 
+                                 class="max-w-full max-h-full object-contain">
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Job 2: The Connor Group -->
                 <div class="relative flex flex-col md:flex-row items-center">
-                    <div class="flex-1 w-full md:w-1/2 p-6 md:pr-12 md:text-right order-2 md:order-1"></div>
+                    <!-- Logo (Left Side) -->
+                    <div class="flex-1 w-full md:w-1/2 p-6 md:pr-12 md:text-right order-2 md:order-1 flex justify-center md:justify-end">
+                        <div class="w-32 h-32 bg-white rounded-xl shadow-md p-4 flex items-center justify-center border border-slate-100 transition hover:shadow-lg">
+                            <!-- Logo Placeholder -->
+                            <img src="ConnorGroup_Logo.png" 
+                                 onerror="this.style.display='none'; this.parentElement.innerText='Connor Group Logo'"
+                                 alt="The Connor Group Logo" 
+                                 class="max-w-full max-h-full object-contain">
+                        </div>
+                    </div>
+                    <!-- Timeline Dot -->
                     <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 bg-white border-2 border-brand-600 rounded-full shadow hidden md:block order-2"></div>
+                    <!-- Text Content (Right Side) -->
                     <div class="flex-1 w-full md:w-1/2 p-6 md:pl-12 order-3">
                         <h3 class="text-xl font-bold text-slate-900">The Connor Group</h3>
                         <p class="text-brand-600 font-medium">Technology Operations Intern</p>
@@ -214,6 +266,7 @@
 
                 <!-- Job 3: Winsupply -->
                 <div class="relative flex flex-col md:flex-row items-center">
+                    <!-- Text Content (Left Side) -->
                     <div class="flex-1 w-full md:w-1/2 p-6 md:pr-12 md:text-right order-2 md:order-1">
                         <h3 class="text-xl font-bold text-slate-900">Winsupply</h3>
                         <p class="text-brand-600 font-medium">Accounting Intern</p>
@@ -222,8 +275,18 @@
                             Gained foundational business experience in accounting processes and financial data handling.
                         </p>
                     </div>
+                    <!-- Timeline Dot -->
                     <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 bg-white border-2 border-brand-600 rounded-full shadow hidden md:block order-2"></div>
-                    <div class="flex-1 w-full md:w-1/2 p-6 md:pl-12 order-3"></div>
+                    <!-- Logo (Right Side) -->
+                    <div class="flex-1 w-full md:w-1/2 p-6 md:pl-12 order-3">
+                        <div class="w-32 h-32 mx-auto md:mx-0 bg-white rounded-xl shadow-md p-4 flex items-center justify-center border border-slate-100 transition hover:shadow-lg">
+                            <!-- Logo Placeholder -->
+                            <img src="Winsupply_Logo.png" 
+                                 onerror="this.style.display='none'; this.parentElement.innerText='Winsupply Logo'"
+                                 alt="Winsupply Logo" 
+                                 class="max-w-full max-h-full object-contain">
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Other Experience (Combined) -->
@@ -293,7 +356,7 @@
                 <div>
                     <h2 class="text-3xl font-bold text-white mb-4">Let's Connect</h2>
                     <p class="text-lg text-slate-400 mb-8">
-                        I am currently open to opportunities in Business Analytics and Cyber Security. 
+                        I am currently open to opportunities in Business Analytics. 
                         Feel free to reach out!
                     </p>
                     <div class="space-y-4">
