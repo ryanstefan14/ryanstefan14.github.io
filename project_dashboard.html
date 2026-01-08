@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLB Interactive Dashboard | Ryan Stefan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: { fontFamily: { sans: ['Inter', 'sans-serif'] }, colors: { brand: { 500: '#0ea5e9', 600: '#0284c7' } } }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-sm shadow-sm z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center">
+            <a href="projects.html" class="text-brand-600 font-bold hover:text-brand-500 transition flex items-center">
+                <i class="fas fa-arrow-left mr-2"></i> Back to Projects
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-24 pb-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto space-y-8">
+            
+            <div class="text-center">
+                <h1 class="text-3xl font-extrabold text-slate-900 mb-2">MLB Interactive Dashboard</h1>
+                <p class="text-slate-600">National League Central Analysis (Tableau)</p>
+            </div>
+
+            <!-- Video Player -->
+            <div class="bg-black rounded-xl overflow-hidden shadow-2xl aspect-video relative group">
+                <video controls class="w-full h-full object-contain">
+                    <source src="final dashboard video.mp4" type="video/mp4">
+                    <!-- Fallback -->
+                    <div class="absolute inset-0 flex items-center justify-center text-white">
+                        <p>Your browser does not support the video tag. Please view the dashboard file directly.</p>
+                    </div>
+                </video>
+            </div>
+
+            <!-- Transcript / Description -->
+            <div class="bg-white rounded-xl shadow-md border border-slate-100 p-8">
+                <h2 class="text-xl font-bold text-slate-900 mb-4">Project Walkthrough</h2>
+                <div class="prose prose-slate text-slate-600 leading-relaxed space-y-4">
+                    <p>
+                        <strong>Overview:</strong> This dashboard focuses on the National League Central teams (Reds, Cardinals, Brewers, Cubs, Pirates). It visualizes player batting averages, On-Base Percentage (OBP), and Slugging Percentage (SLG) for the month of June.
+                    </p>
+                    <p>
+                        <strong>Key Features:</strong>
+                        <ul class="list-disc pl-5 mt-2">
+                            <li><strong>Interactive Filtering:</strong> Users can filter by specific teams (e.g., clicking on "Reds") to see only that team's roster.</li>
+                            <li><strong>Drill-Down Capability:</strong> Clicking on an individual player (e.g., Matt McLain) updates the charts to show his specific contribution, such as his 5 Home Runs and .333 OBP for the month.</li>
+                            <li><strong>Trend Analysis:</strong> The dashboard tracks month-over-month changes, showing how metrics like OBP and SLG have improved or declined compared to May.</li>
+                        </ul>
+                    </p>
+                    <div class="bg-slate-50 p-4 rounded-lg mt-6 border-l-4 border-brand-500">
+                        <p class="italic text-sm">
+                            "Right now this dashboard is showing all the NL Central teams... You can use this slider to change the month... If you want to look at stats at an individual level, you can click on any player, like Matt McLain, and it updates the graphs to show his specific performance."
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+</body>
+</html>
