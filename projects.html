@@ -66,7 +66,7 @@
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 class="text-4xl font-extrabold text-slate-900 mb-4">My Projects</h1>
             <p class="text-xl text-slate-600 max-w-2xl mx-auto">
-                A collection of my work in Business Analytics, Machine Learning, and Data Visualization.
+                A showcase of my technical work in Data Analysis, Software Development, and Business Intelligence.
             </p>
         </div>
     </header>
@@ -76,74 +76,84 @@
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-                <!-- PROJECT 1: Placeholder -->
+                <!-- PROJECT 1: Allstar Results -->
                 <div class="bg-white rounded-xl shadow-md border border-slate-100 overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col">
                     <!-- Project Image -->
                     <div class="h-48 bg-slate-200 relative overflow-hidden group">
-                        <!-- Replace src with your project screenshot -->
-                        <img src="https://via.placeholder.com/800x400?text=Project+Screenshot" 
-                             alt="Project 1" 
-                             class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+                        <a href="project_allstar.html">
+                            <img src="https://via.placeholder.com/800x400?text=All-Star+Analysis" 
+                                 alt="All-Star Game Analysis" 
+                                 class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+                        </a>
                     </div>
                     <div class="p-6 flex flex-col flex-grow">
                         <div class="flex justify-between items-start mb-2">
-                            <h3 class="text-xl font-bold text-slate-900">Sales Data Analysis</h3>
-                            <!-- GitHub/Link Icon -->
-                            <a href="#" class="text-slate-400 hover:text-brand-600 transition"><i class="fab fa-github text-xl"></i></a>
+                            <h3 class="text-xl font-bold text-slate-900">
+                                <a href="project_allstar.html" class="hover:text-brand-600 transition">MLB All-Star Analysis</a>
+                            </h3>
+                            <a href="project_allstar.html" class="text-slate-400 hover:text-brand-600 transition" title="View Project"><i class="fas fa-arrow-right text-xl"></i></a>
                         </div>
                         <p class="text-slate-600 mb-4 flex-grow text-sm">
-                            Analyzed a large retail dataset to identify seasonal trends and improve inventory management efficiency by 15%.
+                            Analyzed 25 years of MLB All-Star Game data to track team performance trends. Ranked teams by batting average and total hits to identify historical dominance.
                         </p>
                         <!-- Tech Stack Tags -->
                         <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="px-2 py-1 bg-brand-50 text-brand-700 text-xs font-semibold rounded-md">Data Analysis</span>
+                            <span class="px-2 py-1 bg-brand-50 text-brand-700 text-xs font-semibold rounded-md">Statistics</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 2: Consultant Performance System (Python) -->
+                <div class="bg-white rounded-xl shadow-md border border-slate-100 overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                    <div class="h-48 bg-slate-200 relative overflow-hidden group">
+                        <a href="project_consultant.html">
+                            <img src="https://via.placeholder.com/800x400?text=Python+Analytics" 
+                                 alt="Consultant Analytics" 
+                                 class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+                        </a>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-slate-900">
+                                <a href="project_consultant.html" class="hover:text-brand-600 transition">Consultant Performance System</a>
+                            </h3>
+                            <a href="project_consultant.html" class="text-slate-400 hover:text-brand-600 transition" title="View Project"><i class="fas fa-arrow-right text-xl"></i></a>
+                        </div>
+                        <p class="text-slate-600 mb-4 flex-grow text-sm">
+                            Built a Python application for ABC Consulting to automate performance reviews. Implemented logic to calculate utilization rates and performed keyword-based sentiment analysis on evaluations.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
                             <span class="px-2 py-1 bg-brand-50 text-brand-700 text-xs font-semibold rounded-md">Python</span>
-                            <span class="px-2 py-1 bg-brand-50 text-brand-700 text-xs font-semibold rounded-md">Pandas</span>
+                            <span class="px-2 py-1 bg-brand-50 text-brand-700 text-xs font-semibold rounded-md">Sentiment Analysis</span>
+                            <span class="px-2 py-1 bg-brand-50 text-brand-700 text-xs font-semibold rounded-md">Automation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 3: Tableau Dashboard -->
+                <div class="bg-white rounded-xl shadow-md border border-slate-100 overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                    <div class="h-48 bg-slate-200 relative overflow-hidden group">
+                        <a href="project_dashboard.html">
+                            <img src="https://via.placeholder.com/800x400?text=Tableau+Dashboard" 
+                                 alt="Tableau Dashboard" 
+                                 class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+                        </a>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-slate-900">
+                                <a href="project_dashboard.html" class="hover:text-brand-600 transition">MLB Interactive Dashboard</a>
+                            </h3>
+                            <a href="project_dashboard.html" class="text-slate-400 hover:text-brand-600 transition" title="View Project"><i class="fas fa-arrow-right text-xl"></i></a>
+                        </div>
+                        <p class="text-slate-600 mb-4 flex-grow text-sm">
+                            Designed a dynamic Tableau dashboard for the NL Central. Visualized key metrics like Batting Average, OBP, and SLG with month-over-month change tracking.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
                             <span class="px-2 py-1 bg-brand-50 text-brand-700 text-xs font-semibold rounded-md">Tableau</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PROJECT 2: Placeholder -->
-                <div class="bg-white rounded-xl shadow-md border border-slate-100 overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col">
-                    <div class="h-48 bg-slate-200 relative overflow-hidden group">
-                        <img src="https://via.placeholder.com/800x400?text=Dashboard+Example" 
-                             alt="Project 2" 
-                             class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <div class="flex justify-between items-start mb-2">
-                            <h3 class="text-xl font-bold text-slate-900">Power BI Financial Dashboard</h3>
-                            <a href="#" class="text-slate-400 hover:text-brand-600 transition"><i class="fas fa-external-link-alt text-xl"></i></a>
-                        </div>
-                        <p class="text-slate-600 mb-4 flex-grow text-sm">
-                            Created an interactive dashboard for financial reporting, visualizing key performance indicators (KPIs) for executive stakeholders.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mt-auto">
-                            <span class="px-2 py-1 bg-brand-50 text-brand-700 text-xs font-semibold rounded-md">Power BI</span>
-                            <span class="px-2 py-1 bg-brand-50 text-brand-700 text-xs font-semibold rounded-md">SQL</span>
-                            <span class="px-2 py-1 bg-brand-50 text-brand-700 text-xs font-semibold rounded-md">Excel</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PROJECT 3: Placeholder -->
-                <div class="bg-white rounded-xl shadow-md border border-slate-100 overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col">
-                    <div class="h-48 bg-slate-200 relative overflow-hidden group">
-                        <img src="https://via.placeholder.com/800x400?text=ML+Model" 
-                             alt="Project 3" 
-                             class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <div class="flex justify-between items-start mb-2">
-                            <h3 class="text-xl font-bold text-slate-900">Customer Churn Prediction</h3>
-                            <a href="#" class="text-slate-400 hover:text-brand-600 transition"><i class="fab fa-github text-xl"></i></a>
-                        </div>
-                        <p class="text-slate-600 mb-4 flex-grow text-sm">
-                            Developed a machine learning model using Logistic Regression to predict customer churn rates with 85% accuracy.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mt-auto">
-                            <span class="px-2 py-1 bg-brand-50 text-brand-700 text-xs font-semibold rounded-md">Python</span>
-                            <span class="px-2 py-1 bg-brand-50 text-brand-700 text-xs font-semibold rounded-md">Scikit-Learn</span>
+                            <span class="px-2 py-1 bg-brand-50 text-brand-700 text-xs font-semibold rounded-md">Data Visualization</span>
+                            <span class="px-2 py-1 bg-brand-50 text-brand-700 text-xs font-semibold rounded-md">Business Intelligence</span>
                         </div>
                     </div>
                 </div>
