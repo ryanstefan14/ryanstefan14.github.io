@@ -83,6 +83,7 @@
         const MOCK_TIPS = "1. Switch to store-brand almond milk to save ~$0.50.\n2. Buy chicken in bulk family packs to reduce price per pound.\n3. Freeze extra spinach to prevent spoilage waste.";
 
         const analyzeReceiptImage = async (base64Image, mimeType, apiKey) => {
+          // DEMO MODE CHECK: If no key, return mock data
           if (!apiKey) {
               console.log("No API Key provided, using Demo Mode.");
               await new Promise(resolve => setTimeout(resolve, 1500)); // Simulate network delay
@@ -391,7 +392,8 @@
               setReceipts(prev => [...prev, ...results]);
               
               if (!userApiKey) {
-                  setError("Running in Demo Mode (Mock Data). Enter a Gemini API Key in settings for real analysis.");
+                  // Optional: Notify user they are in demo mode if they didn't know
+                  // setError("Running in Demo Mode (Mock Data). Enter a Gemini API Key in settings for real analysis.");
               }
 
             } catch (err) {
