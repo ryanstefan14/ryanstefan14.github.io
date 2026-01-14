@@ -28,25 +28,42 @@
 
     <!-- Main Content -->
     <main class="flex-grow pt-24 pb-12 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-6xl mx-auto">
+        <div class="max-w-6xl mx-auto space-y-8">
             
-            <div class="bg-white rounded-xl shadow-lg border border-slate-100 overflow-hidden mb-8">
+            <!-- Header Section -->
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 overflow-hidden">
                 <div class="p-8 border-b border-slate-100">
                     <h1 class="text-3xl font-extrabold text-slate-900 mb-4">SQL Baseball Database Project</h1>
                     <p class="text-slate-600 leading-relaxed">
-                        This project involved designing and implementing a comprehensive relational database to manage baseball statistics. The schema includes tables for Players, Teams, Coaches, Games, Stadiums, Salaries, and Medical Staff. I wrote complex SQL queries to extract meaningful insights, such as weather impact on games, player demographics, and salary distributions.
+                        This project involved designing and implementing a comprehensive relational database (`baseball2`) to manage baseball statistics. The schema includes tables for Players, Teams, Coaches, Games, Stadiums, Salaries, and Medical Staff. I wrote complex SQL queries to extract meaningful insights, such as weather impact on games, player demographics, and salary distributions.
                     </p>
                 </div>
             </div>
 
+            <!-- Database Diagram Section (New) -->
+            <div class="bg-white rounded-xl shadow-md border border-slate-100 overflow-hidden">
+                <div class="bg-slate-50 px-6 py-4 border-b border-slate-200">
+                    <h2 class="font-bold text-slate-800 flex items-center">
+                        <i class="fas fa-project-diagram mr-2 text-brand-600"></i>Entity Relationship Diagram (ERD)
+                    </h2>
+                </div>
+                <div class="p-6 bg-slate-100 flex justify-center">
+                    <img src="Final ER diagram.jpg" 
+                         alt="Baseball Database Entity Relationship Diagram" 
+                         class="max-w-full h-auto rounded-lg shadow-sm border border-slate-200 hover:shadow-md transition-shadow"
+                         onerror="this.src='https://via.placeholder.com/1200x600?text=Database+Schema+Diagram'">
+                </div>
+            </div>
+
+            <!-- Code Grid -->
             <div class="grid lg:grid-cols-2 gap-8">
                 <!-- Schema Design Column -->
-                <div class="bg-white rounded-xl shadow-md border border-slate-100 overflow-hidden">
+                <div class="bg-white rounded-xl shadow-md border border-slate-100 overflow-hidden flex flex-col">
                     <div class="bg-slate-50 px-6 py-4 border-b border-slate-200">
                         <h2 class="font-bold text-slate-800">Database Schema (DDL)</h2>
                     </div>
-                    <div class="p-6 overflow-x-auto h-96">
-                        <pre class="font-mono text-xs text-slate-600"><code>create schema if not exists baseball2;
+                    <div class="p-6 overflow-x-auto h-96 flex-grow">
+                        <pre class="font-mono text-xs text-slate-600 leading-relaxed"><code>create schema if not exists baseball2;
 use baseball2;
 
 create table if not exists player (
@@ -82,12 +99,12 @@ alter table team add foreign key(stadiumID) references stadium(stadiumID);
                 </div>
 
                 <!-- Analysis Queries Column -->
-                <div class="bg-white rounded-xl shadow-md border border-slate-100 overflow-hidden">
+                <div class="bg-white rounded-xl shadow-md border border-slate-100 overflow-hidden flex flex-col">
                     <div class="bg-slate-50 px-6 py-4 border-b border-slate-200">
                         <h2 class="font-bold text-slate-800">Data Analysis Queries</h2>
                     </div>
-                    <div class="p-6 overflow-x-auto h-96">
-                        <pre class="font-mono text-xs text-slate-600"><code>#1 How many times each team played in rain or thunderstorms
+                    <div class="p-6 overflow-x-auto h-96 flex-grow">
+                        <pre class="font-mono text-xs text-slate-600 leading-relaxed"><code>#1 How many times each team played in rain or thunderstorms
 SELECT t.teamName, count(g.gameID) Games_in_RainOrThunderstorm
 FROM team t
 RIGHT JOIN game g ON t.teamID in (g.hometeamID, g.awayteamID)
