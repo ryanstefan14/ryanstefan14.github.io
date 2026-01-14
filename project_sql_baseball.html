@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Baseball Database | Ryan Stefan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: { fontFamily: { sans: ['Inter', 'sans-serif'], mono: ['Fira Code', 'monospace'] }, colors: { brand: { 500: '#0ea5e9', 600: '#0284c7' } } }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-sm shadow-sm z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center">
+            <a href="projects.html" class="text-brand-600 font-bold hover:text-brand-500 transition flex items-center">
+                <i class="fas fa-arrow-left mr-2"></i> Back to Projects
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-24 pb-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+            
+            <div class="bg-white rounded-xl shadow-lg border border-slate-100 overflow-hidden mb-8">
+                <div class="p-8 border-b border-slate-100">
+                    <h1 class="text-3xl font-extrabold text-slate-900 mb-4">SQL Baseball Database Project</h1>
+                    <p class="text-slate-600 leading-relaxed">
+                        This project involved designing and implementing a comprehensive relational database to manage baseball statistics. The schema includes tables for Players, Teams, Coaches, Games, Stadiums, Salaries, and Medical Staff. I wrote complex SQL queries to extract meaningful insights, such as weather impact on games, player demographics, and salary distributions.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Schema Design Column -->
+                <div class="bg-white rounded-xl shadow-md border border-slate-100 overflow-hidden">
+                    <div class="bg-slate-50 px-6 py-4 border-b border-slate-200">
+                        <h2 class="font-bold text-slate-800">Database Schema (DDL)</h2>
+                    </div>
+                    <div class="p-6 overflow-x-auto h-96">
+                        <pre class="font-mono text-xs text-slate-600"><code>create schema if not exists baseball2;
+use baseball2;
+
+create table if not exists player (
+    playerID int,
+    firstName varchar(25),
+    lastName varchar(25),
+    age int,
+    heightinch char(2),
+    weightlb char(3),
+    teamID int,
+    salaryID int,
+    coachID int, 
+    primary key(playerID)
+);
+
+create table if not exists team (
+    teamID int,
+    teamName varchar(15),
+    city varchar(25),
+    state char(2),
+    establishedYear char(4),
+    division varchar(60),
+    teamColor varchar(10),
+    stadiumID int,
+    primary key(teamID)
+);
+
+-- (Foreign keys added via ALTER TABLE commands)
+alter table player add foreign key(teamID) references team(teamID);
+alter table team add foreign key(stadiumID) references stadium(stadiumID);
+...</code></pre>
+                    </div>
+                </div>
+
+                <!-- Analysis Queries Column -->
+                <div class="bg-white rounded-xl shadow-md border border-slate-100 overflow-hidden">
+                    <div class="bg-slate-50 px-6 py-4 border-b border-slate-200">
+                        <h2 class="font-bold text-slate-800">Data Analysis Queries</h2>
+                    </div>
+                    <div class="p-6 overflow-x-auto h-96">
+                        <pre class="font-mono text-xs text-slate-600"><code>#1 How many times each team played in rain or thunderstorms
+SELECT t.teamName, count(g.gameID) Games_in_RainOrThunderstorm
+FROM team t
+RIGHT JOIN game g ON t.teamID in (g.hometeamID, g.awayteamID)
+WHERE g.weather LIKE 'Rain' or 'Thunderstorms'
+GROUP BY t.teamName;
+
+#4 Total salary paid from each team (Highest to Lowest)
+SELECT t.teamName, SUM(s.amount) AS total_salary
+FROM salary s
+INNER JOIN player p ON s.salaryID = p.salaryID
+INNER JOIN team t ON p.teamID = t.teamID
+GROUP BY t.teamName
+ORDER BY total_salary DESC;
+
+#5 Players taller than league average
+SELECT p.firstname, p.lastname, p.heightInch, t.teamName
+FROM player p
+INNER JOIN team t ON p.teamID = t.teamID
+WHERE p.heightInch > (SELECT AVG(heightInch) FROM player p)
+ORDER BY heightinch DESC;
+
+#11 Average number of umpires per game
+SELECT AVG(num_umpires) umpires_per_game
+FROM (SELECT COUNT(*) num_umpires FROM umpcrew GROUP BY gameID)t;</code></pre>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="bg-slate-900 text-slate-300 py-8 border-t border-slate-800 mt-auto">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p>&copy; 2025 Ryan Stefan. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
